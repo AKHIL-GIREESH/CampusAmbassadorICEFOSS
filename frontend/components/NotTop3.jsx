@@ -1,12 +1,12 @@
 const NotTop3 = ({ data }) => {
   return (
     <>
-      {data.map((item) => (
+      {/* {data.map((item) => (
         <>
           {item[2]}
           <br />
         </>
-      ))}
+      ))} */}
     </>
   );
 };

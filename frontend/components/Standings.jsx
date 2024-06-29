@@ -8,14 +8,14 @@ const Standing = () => {
   const { data, error, isFetching } = useFetchStats();
   return (
     <>
-      {isFetching && <Loading />}
-      {error && <Err />}
       {data && (
         <>
           <Top3 data={data.slice(1, 4)} />
           <NotTop3 data={data.slice(4)} />
         </>
       )}
+      {isFetching && <Loading />}
+      {error && <Err />}
     </>
   );
 };
