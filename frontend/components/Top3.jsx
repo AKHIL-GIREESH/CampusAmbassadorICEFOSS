@@ -1,4 +1,5 @@
 import First from "../src/img/first.png";
+import Top3CardPC from "./Top3CardPC";
 
 const Top3 = ({ data }) => {
   return (
@@ -10,34 +11,24 @@ const Top3 = ({ data }) => {
         justifyContent: "space-evenly",
       }}
     >
-      {data.map((item) => (
-        <div
-          style={{
-            width: "26vw",
-            border: "1px solid",
-            height: "45vh",
-            borderRadius: "10px",
-            padding: "10px",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <img src={First} style={{ height: "80%", alignSelf: "center" }}></img>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>
-              <b>A Pretty Dang Long Name</b>
-            </p>
-            <p>Points</p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>{item[2]}</p>
-            <p>
-              <b>42069</b>
-            </p>
-          </div>
-          <br />
-        </div>
-      ))}
+      <Top3CardPC
+        Name={"A Pretty Dang Long Name"}
+        ID={data[0][2]}
+        Points={42069}
+        Img={First}
+      />
+      <Top3CardPC
+        Name={"A Pretty Dang Long Name"}
+        ID={data[1][2]}
+        Points={42069}
+        Img={First}
+      />
+      <Top3CardPC
+        Name={"A Pretty Dang Long Name"}
+        ID={data[2][2]}
+        Points={42069}
+        Img={First}
+      />
     </div>
   );
 };
