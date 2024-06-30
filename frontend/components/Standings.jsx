@@ -11,6 +11,7 @@ const Standing = () => {
       {data && (
         <>
           <Top3 data={data.slice(1, 4)} />
+          <br />
           <NotTop3 data={data.slice(4)} />
         </>
       )}

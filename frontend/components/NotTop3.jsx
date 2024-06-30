@@ -5,7 +5,7 @@ const NotTop3 = ({ data }) => {
         display: "flex",
         flexDirection: "column",
         width: "100vw",
-        border: "1px solid",
+        // border: "1px solid",
         alignItems: "center",
       }}
     >
