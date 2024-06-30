@@ -16,22 +16,30 @@ const NotTop3 = ({ data }) => {
           height: "10vh",
           border: "1px solid",
           borderRadius: "15px 15px 0 0",
+          textAlign: "center",
+          alignItems: "center",
         }}
       >
-        <p>Rank</p>
-        <p>Name</p>
-        <p>ID</p>
-        <p>Points</p>
+        <p style={{ width: "5%" }}>Rank</p>
+        <p style={{ width: "65%" }}>Name</p>
+        <p style={{ width: "20%" }}>ID</p>
+        <p style={{ width: "10%" }}>Points</p>
       </div>
-      {data.map((item) => (
+      {data.map((item, i) => (
         <div
           style={{
             width: "90vw",
             height: "10vh",
             border: "1px solid",
+            display: "flex",
+            textAlign: "center",
+            alignItems: "center",
           }}
         >
-          {item[2]}
+          <p style={{ width: "5%" }}>{i + 4}</p>
+          <p style={{ width: "65%" }}>A Pretty Dang Long Name</p>
+          <p style={{ width: "20%" }}>{item[2]}</p>
+          <p style={{ width: "10%" }}>42069</p>
           <br />
         </div>
       ))}
