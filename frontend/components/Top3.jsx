@@ -9,7 +9,14 @@ const Top3 = ({ data }) => {
       }}
     >
       {data.map((item) => (
-        <div style={{ width: "25vw", border: "1px solid", height: "40vh" }}>
+        <div
+          style={{
+            width: "25vw",
+            border: "1px solid",
+            height: "40vh",
+            borderRadius: "10px",
+          }}
+        >
           {item[2]}
           <br />
         </div>
