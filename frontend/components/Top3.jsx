@@ -9,6 +9,7 @@ const Top3 = ({ data }) => {
         width: "100vw",
         // border: "1px solid",
         justifyContent: "space-evenly",
+        perspective: "1000px",
       }}
     >
       <Top3CardPC
