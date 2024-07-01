@@ -1,6 +1,11 @@
+import { useEffect } from "react";
+
 const Top3CardPC = ({ Name, ID, Points, Img }) => {
+  useEffect(() => {}, []);
+
   return (
     <div
+      className="cardTurn"
       style={{
         width: "26vw",
         border: "1px solid",

@@ -1,4 +1,4 @@
-const NotTop3CardPC = ({ Rank, Name, ID, Points }) => {
+const NotTop3CardPC = ({ Rank, Name, ID, Points, fw }) => {
   return (
     <div
       style={{
@@ -8,6 +8,7 @@ const NotTop3CardPC = ({ Rank, Name, ID, Points }) => {
         border: "1px solid",
         textAlign: "center",
         alignItems: "center",
+        fontWeight: fw,
       }}
     >
       <p style={{ width: "5%" }}>{Rank}</p>
