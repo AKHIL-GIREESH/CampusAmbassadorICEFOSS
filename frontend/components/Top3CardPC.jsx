@@ -8,11 +8,11 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
     gsap.fromTo(
       ".cardTurn",
       {
-        rotateY: 360,
+        rotateY: 860,
       },
       {
         rotateY: 0,
-        duration: 0.8,
+        duration: 2,
         // stagger: 0.1,
       }
     );
@@ -30,6 +30,7 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
         display: "flex",
         flexDirection: "column",
         transformStyle: "preserve-3d",
+        // backfaceVisibility: "hidden",
       }}
     >
       <img src={Img} style={{ height: "80%", alignSelf: "center" }}></img>
