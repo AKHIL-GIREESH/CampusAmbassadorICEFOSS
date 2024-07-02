@@ -43,7 +43,7 @@ const Top3 = ({ data }) => {
         width: "100vw",
         justifyContent: "center",
         height: "60vh",
-        border: "1px solid",
+        // border: "1px solid",
         alignItems: "end",
       }}
     >

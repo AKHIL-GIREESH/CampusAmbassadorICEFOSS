@@ -13,6 +13,7 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
       },
       {
         height: "50vh",
+        borderRadius: "20px 20px 0 0 ",
         duration: 3,
       }
     );
@@ -23,6 +24,7 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
       },
       {
         height: "45vh",
+        borderRadius: "20px 20px 0 10px ",
         duration: 3,
       }
     );
@@ -33,6 +35,7 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
       },
       {
         height: "40vh",
+        borderRadius: "20px 20px 10px 0px ",
         duration: 3,
       }
     );
@@ -61,6 +64,20 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
         opacity: 1,
         duration: 1,
         delay: 2,
+      }
+    );
+
+    gsap.fromTo(
+      ".rankBars>img",
+      {
+        y: -70,
+      },
+      {
+        y: -60,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "linear",
       }
     );
   }, []);
