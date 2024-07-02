@@ -33,4 +33,7 @@ app.get("/", async (req, res) => {
   res.json(getRows.data.values);
 });
 
-app.listen(3001, () => console.log("Server is up and running"));
+const start = () =>
+  app.listen(3001, () => console.log("Server is up and running"));
+
+start();

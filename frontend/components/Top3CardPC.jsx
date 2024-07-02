@@ -5,15 +5,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Top3CardPC = ({ Name, ID, Points, Img }) => {
   useEffect(() => {
-    gsap.fromTo(
+    const tlLP = gsap.timeline();
+    tlLP.fromTo(
       ".cardTurn",
       {
-        rotateY: 860,
+        rotateY: 1600,
+        y: 150,
       },
       {
         rotateY: 0,
-        duration: 2,
+        y: 0,
+        duration: 3,
         // stagger: 0.1,
+      }
+    );
+    tlLP.fromTo(
+      ".cardTurn div",
+      {
+        opacity: 0,
+        y: 10,
+        scale: 0.7,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.5,
       }
     );
   }, []);
@@ -34,13 +51,27 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
       }}
     >
       <img src={Img} style={{ height: "80%", alignSelf: "center" }}></img>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          opacity: 0,
+          // scale: 0,
+        }}
+      >
         <p>
           <b>{Name}</b>
         </p>
         <p>Points</p>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          opacity: 0,
+          // scale: 0,
+        }}
+      >
         <p>{ID}</p>
         <p>
           <b>{Points}</b>

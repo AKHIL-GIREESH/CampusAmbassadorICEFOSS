@@ -2,7 +2,8 @@ import First from "../src/img/first.png";
 import Top3CardPC from "./Top3CardPC";
 
 const Top3 = ({ data }) => {
-  return (
+  let cond = window.innerHeight < window.innerWidth;
+  return cond ? (
     <div
       style={{
         display: "flex",
@@ -31,6 +32,8 @@ const Top3 = ({ data }) => {
         Img={First}
       />
     </div>
+  ) : (
+    <div>hehe</div>
   );
 };
 
