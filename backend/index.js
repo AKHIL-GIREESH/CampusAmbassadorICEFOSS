@@ -5,13 +5,13 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 
+const auth = new google.auth.GoogleAuth({
+  keyFile: "credentials.json",
+  scopes: "https://www.googleapis.com/auth/spreadsheets",
+});
+
 app.get("/", async (req, res) => {
   //   res.send("Hello");
-
-  const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
-  });
 
   const client = await auth.getClient();
 

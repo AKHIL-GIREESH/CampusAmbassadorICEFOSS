@@ -36,13 +36,38 @@ const Top3 = ({ data }) => {
       />
     </div>
   ) : (
-    <Top3CardMob
-      Name={"A Pretty Dang Long Name"}
-      ID={data[2][2]}
-      Points={42069}
-      Img={First}
-      Rank={1}
-    />
+    <div
+      style={{
+        display: "flex",
+        width: "100vw",
+        justifyContent: "center",
+        height: "60vh",
+        border: "1px solid",
+        alignItems: "end",
+      }}
+    >
+      <Top3CardMob
+        Name={"A Pretty Dang Long Name"}
+        ID={data[0][2]}
+        Points={42069}
+        Img={Second}
+        Rank={2}
+      />
+      <Top3CardMob
+        Name={"A Pretty Dang Long Name"}
+        ID={data[1][2]}
+        Points={42069}
+        Img={First}
+        Rank={1}
+      />
+      <Top3CardMob
+        Name={"A Pretty Dang Long Name"}
+        ID={data[2][2]}
+        Points={42069}
+        Img={Third}
+        Rank={3}
+      />
+    </div>
   );
 };
 
