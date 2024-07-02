@@ -1,4 +1,6 @@
 import First from "../src/img/first.png";
+import Second from "../src/img/second.png";
+import Third from "../src/img/third.png";
 import Top3CardPC from "./Top3CardPC";
 
 const Top3 = ({ data }) => {
@@ -17,19 +19,22 @@ const Top3 = ({ data }) => {
         Name={"A Pretty Dang Long Name"}
         ID={data[0][2]}
         Points={42069}
-        Img={First}
+        Img={Second}
+        Rank={2}
       />
       <Top3CardPC
         Name={"A Pretty Dang Long Name"}
         ID={data[1][2]}
         Points={42069}
         Img={First}
+        Rank={1}
       />
       <Top3CardPC
         Name={"A Pretty Dang Long Name"}
         ID={data[2][2]}
         Points={42069}
-        Img={First}
+        Img={Third}
+        Rank={3}
       />
     </div>
   ) : (

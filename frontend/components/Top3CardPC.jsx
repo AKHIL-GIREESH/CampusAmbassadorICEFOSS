@@ -1,16 +1,14 @@
 import { useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
 
-const Top3CardPC = ({ Name, ID, Points, Img }) => {
+const Top3CardPC = ({ Name, ID, Points, Img, Rank }) => {
   useEffect(() => {
     const tlLP = gsap.timeline();
     tlLP.fromTo(
       ".cardTurn",
       {
         rotateY: 1600,
-        y: 150,
+        y: 200,
       },
       {
         rotateY: 0,
@@ -24,15 +22,23 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
       {
         opacity: 0,
         y: 10,
-        scale: 0.7,
+        scale: 0.5,
       },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 0.5,
+        duration: 0.2,
       }
     );
+
+    tlLP.to(".cardTurn img", {
+      y: 10,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+      ease: "linear",
+    });
   }, []);
 
   return (
