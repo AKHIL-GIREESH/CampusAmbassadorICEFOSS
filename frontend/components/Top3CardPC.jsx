@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 
-const Top3CardPC = ({ Name, ID, Points, Img, Rank }) => {
+const Top3CardPC = ({ Name, ID, Points, Img }) => {
   useEffect(() => {
     const tlLP = gsap.timeline();
     tlLP.fromTo(
