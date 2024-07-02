@@ -6,6 +6,7 @@ import Top3CardPC from "./Top3CardPC";
 
 const Top3 = ({ data }) => {
   let cond = window.innerHeight < window.innerWidth;
+
   return cond ? (
     <div
       style={{
