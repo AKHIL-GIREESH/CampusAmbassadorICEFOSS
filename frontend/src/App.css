@@ -1,0 +1,15 @@
+body{
+    min-height: 100vh;
+    max-height:fit-content;
+    background: linear-gradient(
+    135deg,
+    #0238e8 ,
+    
+    
+    #8f6eff 10%,
+    #0238e8 25%,
+    #8f6eff 40%,
+    #22dffe 65%,
+    #8f6eff 100%
+  );
+}

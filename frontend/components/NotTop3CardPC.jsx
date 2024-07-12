@@ -5,9 +5,16 @@ const NotTop3CardPC = ({ Rank, Name, ID, Points, fw }) => {
         display: "flex",
         width: "90vw",
         height: "10vh",
-        border: "1px solid",
         textAlign: "center",
         alignItems: "center",
+        backgroundColor: "white",
+        border: "1px solid rgba(255, 255, 255, 0.4)",
+        background:
+          "linear-gradient(180deg,rgba(255, 255, 255, 0.6) 50%,rgba(255, 255, 255, 0.4) 99.96%)",
+        backdropFilter: "blur(20px)",
+        marginBottom: "5px",
+        borderRadius: "5px",
+        color: "black",
         fontWeight: fw,
       }}
     >

@@ -46,13 +46,15 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
       className="cardTurn"
       style={{
         width: "26vw",
-        border: "1px solid",
         height: "45vh",
         borderRadius: "10px",
         padding: "10px",
         display: "flex",
         flexDirection: "column",
         transformStyle: "preserve-3d",
+        background:
+          "linear-gradient(180deg,rgba(0, 0, 0, 0.7) 50%,rgba(0, 0, 0, 0.5) 99.96%)",
+        backdropFilter: "blur(20px)",
         // backfaceVisibility: "hidden",
       }}
     >
