@@ -87,13 +87,15 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
       className="rankBars"
       id={`Rank${Rank}`}
       style={{
+        background:
+          "linear-gradient(180deg,rgba(0, 0, 0, 0.7) 50%,rgba(0, 0, 0, 0.5) 99.96%)",
+        backdropFilter: "blur(20px)",
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         width: "30vw",
         height: `${height}vh`,
-        border: "1px solid",
         // transform: "translateY(50px)",
       }}
     >

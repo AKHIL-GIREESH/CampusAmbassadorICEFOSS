@@ -4,7 +4,7 @@ const NotTop3CardPC = ({ Rank, Name, ID, Points, fw }) => {
       style={{
         display: "flex",
         width: "90vw",
-        height: "10vh",
+        height: "8vh",
         textAlign: "center",
         alignItems: "center",
         backgroundColor: "white",
@@ -18,10 +18,23 @@ const NotTop3CardPC = ({ Rank, Name, ID, Points, fw }) => {
         fontWeight: fw,
       }}
     >
-      <p style={{ width: "5%" }}>{Rank}</p>
-      <p style={{ width: "65%" }}>{Name}</p>
-      <p style={{ width: "20%" }}>{ID}</p>
-      <p style={{ width: "10%" }}>{Points}</p>
+      {window.innerHeight < window.innerWidth ? (
+        <>
+          <p style={{ width: "5%" }}>{Rank}</p>
+          <p style={{ width: "65%" }}>{Name}</p>
+          <p style={{ width: "20%" }}>{ID}</p>
+          <p style={{ width: "10%" }}>{Points}</p>
+        </>
+      ) : (
+        <>
+          <p style={{ width: "10%" }}>{Rank}</p>
+          <div style={{ width: "75%" }}>
+            <p style={{ width: "100%", fontWeight: "bold" }}>{Name}</p>
+            <p style={{ width: "100%" }}>{ID}</p>
+          </div>
+          <p style={{ width: "15%" }}>{Points}</p>
+        </>
+      )}
     </div>
   );
 };

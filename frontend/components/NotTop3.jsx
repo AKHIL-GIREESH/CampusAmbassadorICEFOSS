@@ -32,13 +32,15 @@ const NotTop3 = ({ data }) => {
         alignItems: "center",
       }}
     >
-      <NotTop3CardPC
-        Rank={"Rank"}
-        Name={"Name"}
-        ID={"ID"}
-        Points={"Points"}
-        fw={"600"}
-      />
+      {window.innerHeight < window.innerWidth && (
+        <NotTop3CardPC
+          Rank={"Rank"}
+          Name={"Name"}
+          ID={"ID"}
+          Points={"Points"}
+          fw={"600"}
+        />
+      )}
       {data.map((item, i) => (
         <NotTop3CardPC
           Rank={i + 4}
