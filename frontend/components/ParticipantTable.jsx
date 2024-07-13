@@ -67,6 +67,9 @@ const ParticipantTable = () => {
                 } else if (registration.type === 'normal') {
                     participant.points += 10;
                 }
+                else if (registration.type === 'hackathon' && registration.type === 'normal' ){
+                    participant.points += 30;
+                }
             }
         });
     };
