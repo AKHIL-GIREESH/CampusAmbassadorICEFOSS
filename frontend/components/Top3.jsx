@@ -22,18 +22,21 @@ const Top3 = ({ data }) => {
         ID={data[0][2]}
         Points={42069}
         Img={Second}
+        Rank={2}
       />
       <Top3CardPC
         Name={"A Pretty Dang Long Name"}
         ID={data[1][2]}
         Points={42069}
         Img={First}
+        Rank={1}
       />
       <Top3CardPC
         Name={"A Pretty Dang Long Name"}
         ID={data[2][2]}
         Points={42069}
         Img={Third}
+        Rank={3}
       />
     </div>
   ) : (

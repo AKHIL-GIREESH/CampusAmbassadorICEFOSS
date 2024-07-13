@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 
-const Top3CardPC = ({ Name, ID, Points, Img }) => {
+const Top3CardPC = ({ Name, ID, Points, Img, Rank }) => {
   useEffect(() => {
     const tlLP = gsap.timeline();
     tlLP.fromTo(
@@ -44,6 +44,7 @@ const Top3CardPC = ({ Name, ID, Points, Img }) => {
   return (
     <div
       className="cardTurn"
+      id={`Rank${Rank}PC`}
       style={{
         width: "26vw",
         height: "45vh",
