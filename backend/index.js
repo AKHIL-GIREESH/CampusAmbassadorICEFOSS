@@ -7,8 +7,14 @@ app.use(cors());
 
 app.get("/", async (req, res) => {
   try {
+    const credentialsBase64 = process.env.CREDS;
+    const credentialsJson = Buffer.from(credentialsBase64, "base64").toString(
+      "utf8"
+    );
+    const credentials = JSON.parse(credentialsJson);
+
     const auth = new google.auth.GoogleAuth({
-      keyFile: "credentials.json",
+      credentials: credentials,
       scopes: "https://www.googleapis.com/auth/spreadsheets",
     });
 
@@ -16,7 +22,7 @@ app.get("/", async (req, res) => {
 
     const googleSheets = google.sheets({ version: "v4", auth: client });
 
-    const spreadsheetId = process.env.sheetID;
+    const spreadsheetId = process.env.SHEETID;
 
     //   const metaData = await googleSheets.spreadsheets.get({
     //     auth,
@@ -31,9 +37,10 @@ app.get("/", async (req, res) => {
 
     res.json(getRows.data.values);
   } catch (e) {
+    console.log(e);
     res.status(500).json({
       error: "Failed to fetch data from Google Sheets",
-      details: error.message,
+      details: e.message,
     });
   }
   //   res.send("Hello");
