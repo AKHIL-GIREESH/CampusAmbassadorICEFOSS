@@ -18,23 +18,23 @@ const Top3 = ({ data }) => {
       }}
     >
       <Top3CardPC
-        Name={"A Pretty Dang Long Name"}
-        ID={data[0][2]}
-        Points={42069}
+        Name={data[1][2]}
+        ID={data[1][6]}
+        Points={data[1][7]}
         Img={Second}
         Rank={2}
       />
       <Top3CardPC
-        Name={"A Pretty Dang Long Name"}
-        ID={data[1][2]}
-        Points={42069}
+        Name={data[0][2]}
+        ID={data[0][6]}
+        Points={data[0][7]}
         Img={First}
         Rank={1}
       />
       <Top3CardPC
-        Name={"A Pretty Dang Long Name"}
-        ID={data[2][2]}
-        Points={42069}
+        Name={data[2][2]}
+        ID={data[2][6]}
+        Points={data[2][7]}
         Img={Third}
         Rank={3}
       />
@@ -51,23 +51,23 @@ const Top3 = ({ data }) => {
       }}
     >
       <Top3CardMob
-        Name={"A Pretty Dang Long Name"}
-        ID={data[0][2]}
-        Points={42069}
+        Name={data[1][2]}
+        ID={data[1][6]}
+        Points={data[1][7]}
         Img={Second}
         Rank={2}
       />
       <Top3CardMob
-        Name={"A Pretty Dang Long Name"}
-        ID={data[1][2]}
-        Points={42069}
+        Name={data[0][2]}
+        ID={data[0][6]}
+        Points={data[0][7]}
         Img={First}
         Rank={1}
       />
       <Top3CardMob
-        Name={"A Pretty Dang Long Name"}
-        ID={data[2][2]}
-        Points={42069}
+        Name={data[2][2]}
+        ID={data[2][6]}
+        Points={data[2][7]}
         Img={Third}
         Rank={3}
       />

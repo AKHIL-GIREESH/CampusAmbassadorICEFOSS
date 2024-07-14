@@ -43,10 +43,10 @@ const NotTop3 = ({ data }) => {
       )}
       {data.map((item, i) => (
         <NotTop3CardPC
-          Rank={i + 4}
-          Name={"A Pretty Dang Long Name"}
-          ID={item[2]}
-          Points={42069}
+          Rank={"#" + (i + 4)}
+          Name={item[2]}
+          ID={item[6]}
+          Points={item[7]}
         />
       ))}
     </div>

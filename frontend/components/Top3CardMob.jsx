@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 
 const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
-  let height = 50 - (Rank - 1) * 5;
+  //let height = 50 - (Rank - 1) * 5;
 
   useEffect(() => {
-    const tlLP = gsap.timeline();
+    //const tlLP = gsap.timeline();
     gsap.fromTo(
       "#Rank1",
       {
@@ -95,11 +95,11 @@ const Top3CardMob = ({ Name, ID, Points, Img, Rank }) => {
         flexDirection: "column",
         justifyContent: "space-between",
         width: "30vw",
-        height: `${height}vh`,
+        // height: `${height}vh`,
         // transform: "translateY(50px)",
       }}
     >
-      <img src={Img} style={{ transform: "translateY(-70px)" }}></img>
+      <img src={Img} style={{ transform: "translateY(-60px)" }}></img>
       <div
         style={{
           height: "fit-content",
