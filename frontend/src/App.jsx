@@ -16,7 +16,7 @@ function App() {
       <h1
         style={{ fontSize: "2.5rem", fontWeight: "900", marginBottom: "20px" }}
       >
-        LEADERBOARDS
+        LEADERBOARD
       </h1>
       <Standing />
     </>
